@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: fzau2k15o-python-gitops
+  description: This is GitOps manifest for fzau2k15o-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=fzau2k15o-python
+    backstage.io/kubernetes-id: fzau2k15o-python 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: fzau2k15o-python-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:fzau2k15o-python

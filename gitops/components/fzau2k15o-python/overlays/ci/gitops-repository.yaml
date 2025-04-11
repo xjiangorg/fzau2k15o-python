@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: fzau2k15o-python-gitops-repository
+spec:
+  url: https://github.com/xjiangorg/fzau2k15o-python-gitops
